@@ -13,6 +13,8 @@ import com.uca.capas.domain.Student;
 
 @Controller
 public class MainController{
+	
+	
 	@RequestMapping("/")
 	public ModelAndView initMain() {
 		ModelAndView mav=new ModelAndView();
@@ -20,6 +22,8 @@ public class MainController{
 		mav.addObject("message","Bienvenidos a MVC");
 		return mav;
 	}
+	
+	
 	@RequestMapping(value = "/formData", method = RequestMethod.POST)
 	public ModelAndView formData(@RequestParam(value = "name") String name, @RequestParam(value = "lname") String lName,
 	@RequestParam(value = "bdate") Date bDate, @RequestParam (value = "career") String career,
